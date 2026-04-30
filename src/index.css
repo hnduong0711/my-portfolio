@@ -1,2 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+
 @import "tailwindcss";
 
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-kavoon: "Kavoon", serif;
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-kavoon);
+
+  --color-primary: #82E0AA;
+  --color-bold: #2ECC71;
+  --color-secondary: #00D4FF;
+
+  --color-logo: var(--color-primary);
+}
+
+html,
+body {
+  width: 100%;
+  background-color: #1A1A1B;
+  color: #F4F4F4;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@utility flex-center {
+    @apply flex justify-center items-center;
+}
+
+@utility col-center {
+    @apply flex flex-col justify-center items-center;
+}
+
+@utility abs-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@utility text-gradient {
+    background: linear-gradient(to bottom, #ffffff, #898989);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@utility logo-text-gradient {
+    background: linear-gradient(to , #ffffff, #898989);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+@utility radial-gradient {
+    background: radial-gradient(
+            circle at center,
+            #434343 0%,
+            #000 50%,
+            transparent 100%
+    );
+}
+
+@layer base {
+  html {
+    @apply font-sans;
+  }
+
+  main {
+    @apply w-full overflow-x-hidden;
+  }
+
+  nav {
+    @apply fixed z-50 w-full px-20 py-2.5;
+
+    div {
+      @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
+    }
+
+    p {
+      @apply font-sans text-3xl -mb-2;
+    }
+
+    a {
+      @apply cursor-pointer text-nowrap md:text-base text-sm;
+    }
+
+    ul {
+      @apply flex-center lg:gap-12 gap-7;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  section{
+    padding: 80 40;
+  }
+}
