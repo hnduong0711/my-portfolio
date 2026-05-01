@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
-    <section id="hero" className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <section id="hero" className="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-2 items-center">
       <div className="">
         <h1>
           Hi, I am{" "}
@@ -22,7 +22,7 @@ const Hero = () => {
         <h3>Art in every line, a craftsman in every dev.</h3>
       </div>
       <div className="flex-center">
-        <img src="/images/myavt.jpg" alt="My Avatar"/>
+        <img src="/images/myavt.jpg" alt="My Avatar" className="justify-center"/>
       </div>
     </section>
   );
