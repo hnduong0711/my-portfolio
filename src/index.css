@@ -69,6 +69,6 @@ body {
   }
 
   section {
-    padding: 90px 80px;
+    @apply px-20 py-22.5 col-center
   }
 }

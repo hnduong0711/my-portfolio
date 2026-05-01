@@ -4,9 +4,10 @@ import { Typewriter } from "react-simple-typewriter";
 const Hero = () => {
   return (
     <section id="hero" className="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-2 items-center">
-      <div className="">
-        <h1>
-          Hi, I am{" "}
+      <div className="text-center">
+        <h1 className="font-heading md:text-4xl text-xl text-gradient ">
+          <div>Hi, </div>
+          I am{" "}
           <Typewriter
             loop
             cursor
@@ -18,11 +19,11 @@ const Hero = () => {
             words={["Coder", "Developer", "Programmer"]}
           ></Typewriter>
         </h1>
-        <h2>Painting with Code</h2>
-        <h3>Art in every line, a craftsman in every dev.</h3>
+        <h2 className="font-heading md:text-2xl text-lg text-gradient">Painting with Code</h2>
+        <h3 className="font-heading md:text-lg text-sm text-gradient">Art in every line, a craftsman in every dev.</h3>
       </div>
-      <div className="flex-center">
-        <img src="/images/myavt.jpg" alt="My Avatar" className="justify-center"/>
+      <div className="md:w-full flex-center">
+        <img src="/images/myavt.jpg" alt="My Avatar" className="rounded-xl w-60 h-80 md:w-90 md:h-120"/>
       </div>
     </section>
   );
