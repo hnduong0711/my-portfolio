@@ -1,0 +1,60 @@
+const projects = [
+  {
+    id: "teamodoro",
+    title: "Teamodoro",
+    description:
+      "Short description Short description Short description Short description Short description Short description Short description Short description Short description",
+    tech: [
+      "ReactJS - Typescipt",
+      "TailwindCSS",
+      "Zustand",
+      "Framer-motion",
+      "Dnd-kit core",
+      "Firebase",
+      "Cloudinary",
+    ],
+    image: "/images/portfolio.png",
+    github: "https://github.com/hnduong0711/Teamodoro.git",
+    livedemo: "https://resumio-b2216.web.app",
+    featured: true,
+  },
+  {
+    id: "youtube",
+    title: "Youtube",
+    description: "Short description",
+    tech: [
+      "ReactJS - Typescipt",
+      "TailwindCSS",
+      "Zustand",
+      "Framer-motion",
+      "Dnd-kit core",
+      "Firebase",
+      "Cloudinary",
+    ],
+    image: "/images/portfolio.png",
+    github: "https://github.com/hnduong0711/Teamodoro.git",
+    livedemo: "https://resumio-b2216.web.app",
+    videodemo: "...",
+    featured: true,
+  },
+  {
+    id: "usermana",
+    title: "User management",
+    description: "Short description",
+    tech: [
+      "ReactJS - Typescipt",
+      "TailwindCSS",
+      "Zustand",
+      "Framer-motion",
+      "Dnd-kit core",
+      "Firebase",
+      "Cloudinary",
+    ],
+    image: "/images/portfolio.png",
+    github: "https://github.com/hnduong0711/Teamodoro.git",
+    livedemo: "https://resumio-b2216.web.app",
+    featured: true,
+  },
+];
+
+export default projects;

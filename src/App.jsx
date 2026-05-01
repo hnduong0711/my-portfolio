@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
+import Project from "./components/Project";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -11,6 +12,7 @@ function App() {
     <main>
       <Nav />
       <Hero />
+      <Project />
     </main>
   );
 }
