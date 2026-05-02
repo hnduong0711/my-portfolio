@@ -55,8 +55,12 @@ body {
       transparent 100%);
 }
 
-@utility btn{
-  @apply bg-bold text-sm text-nowrap text-black rounded-lg p-2;
+@utility green-btn{
+  @apply bg-bold text-xs text-nowrap text-black rounded-lg p-2 flex-1 py-2 text-center;
+}
+
+@utility black-btn{
+  @apply flex-1 bg-black text-white py-2 rounded-lg text-xs text-center
 }
 
 @layer base {

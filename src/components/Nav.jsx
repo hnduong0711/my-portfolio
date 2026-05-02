@@ -68,7 +68,7 @@ const Nav = () => {
         className={`border-b border-primary md:px-20 py-2.5 flex-between ${isMobile ? "flex-between px-5" : ""}`}
       >
         <a href="#home">
-          <h1 className="text-[28px] md:text-[40px]  text-logo font-heading text-nowrap">
+          <h1 className="text-[28px] md:text-4xl  text-logo font-heading text-nowrap">
             Auth Sun
           </h1>
         </a>
@@ -93,7 +93,7 @@ const Nav = () => {
                     <a
                       href={`#${link.id}`}
                       onClick={() => setIsOpen(false)}
-                      className="text-sm text-black"
+                      className="text-xs text-black"
                     >
                       {link.title}
                     </a>
@@ -107,7 +107,7 @@ const Nav = () => {
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
-                  className="cursor-pointer text-nowrap md:text-base"
+                  className="cursor-pointer text-nowrap md:text-sm"
                   href={`#${link.id}`}
                 >
                   {link.title}
