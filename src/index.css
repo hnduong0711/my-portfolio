@@ -56,11 +56,11 @@ body {
 }
 
 @utility green-btn{
-  @apply bg-bold text-xs text-nowrap text-black rounded-lg p-2 flex-1 py-2 text-center;
+  @apply bg-bold md:text-xs text-[11px] text-nowrap text-black rounded-lg p-2 flex-1 py-2 text-center;
 }
 
 @utility black-btn{
-  @apply flex-1 bg-black text-white py-2 rounded-lg text-xs text-center
+  @apply flex-1 bg-black text-white py-2 rounded-lg md:text-xs text-[11px] text-center
 }
 
 @layer base {
@@ -73,6 +73,6 @@ body {
   }
 
   section {
-    @apply px-20 py-22.5 col-center
+    @apply px-20 md:py-22.5 pt-22.5 col-center
   }
 }

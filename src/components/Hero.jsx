@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
-    <section id="hero" className="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-2 items-center">
+    <section id="hero" className="grid grid-cols-1 md:grid-cols-2 md:gap-10 gap-2 items-center h-screen">
       <div className="text-center">
         <h1 className="font-heading md:text-4xl text-xl text-gradient ">
           <div>Hi, </div>
@@ -23,7 +23,7 @@ const Hero = () => {
         <h3 className="font-heading md:text-lg text-sm text-gradient">Art in every line, a craftsman in every dev.</h3>
       </div>
       <div className="md:w-full flex-center">
-        <img src="/images/myavt.jpg" alt="My Avatar" className="rounded-xl w-60 h-80 md:w-90 md:h-120"/>
+        <img src="/images/myavt.jpg" alt="My Avatar" className="rounded-xl w-66 h-88 md:w-72 md:h-96"/>
       </div>
     </section>
   );
