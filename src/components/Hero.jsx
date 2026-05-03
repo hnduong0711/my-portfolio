@@ -23,7 +23,7 @@ const Hero = () => {
         <h3 className="font-heading md:text-lg text-sm text-gradient">Art in every line, a craftsman in every dev.</h3>
       </div>
       <div className="md:w-full flex-center">
-        <img src="/images/myavt.jpg" alt="My Avatar" className="rounded-xl w-66 h-88 md:w-72 md:h-96"/>
+        <img src="/images/myavt.jpg" alt="My Avatar" className="rounded-xl w-66 md:w-72 md:h-96"/>
       </div>
     </section>
   );

@@ -67,7 +67,7 @@ const Nav = () => {
       <div
         className={`border-b border-primary md:px-20 py-2.5 flex-between ${isMobile ? "flex-between px-5" : ""}`}
       >
-        <a href="#home">
+        <a href="#hero">
           <h1 className="text-[28px] md:text-4xl  text-logo font-heading text-nowrap">
             Auth Sun
           </h1>

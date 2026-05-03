@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import gsap from "gsap";
 import Project from "./components/Project";
+import WorkExp from "./components/WorkExp";
+import Skills from "./components/Skills";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -13,6 +15,8 @@ function App() {
       <Nav />
       <Hero />
       <Project />
+      <WorkExp />
+      <Skills />
     </main>
   );
 }
