@@ -94,6 +94,6 @@ body {
   }
 
   section {
-    @apply px-20 md:py-22.5 pt-22.5 col-center overflow-hidden
+    @apply px-10 md:px-20 md:py-22.5 pt-22.5 col-center overflow-hidden
   }
 }

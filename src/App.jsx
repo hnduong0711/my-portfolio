@@ -8,6 +8,7 @@ import WorkExp from "./components/WorkExp";
 import Skills from "./components/Skills";
 import EducationAndCertificate from "./components/EducationAndCertificate";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -21,6 +22,7 @@ function App() {
       <Skills />
       <EducationAndCertificate />
       <About />
+      <Footer />
     </main>
   );
 }

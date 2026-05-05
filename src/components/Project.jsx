@@ -46,8 +46,10 @@ const Project = () => {
   };
 
   return (
-    <section className="overflow-hidden h-screen" id="projects">
-      <h1 className="font-heading text-xl md:text-4xl md:mb-10 tracking-widest">Projects</h1>
+    <section className="" id="projects">
+      <h1 className="font-heading text-xl md:text-4xl md:mb-10 tracking-widest">
+        Projects
+      </h1>
 
       <div className="relative w-full max-w-5xl md:h-[80vh] h-screen flex-center">
         {/* project list */}
@@ -60,20 +62,20 @@ const Project = () => {
             <div
               key={project.id}
               ref={(el) => (itemsRef.current[index] = el)}
-              className="absolute w-[40vh] md:w-[70%] h-[70%] md:h-auto bg-white text-black rounded-3xl p-4 md:p-8 shadow-2xl flex flex-col md:flex-row gap-4 md:gap-6"
+              className="absolute w-[40vh] md:w-[70%] h-[70vh] bg-white text-black rounded-3xl p-4 md:p-8 shadow-2xl flex flex-col md:flex-row gap-4 md:gap-6"
               style={{ backfaceVisibility: "hidden" }}
             >
               {/* {!isMobile && ( */}
-                <div className="w-full md:w-1/2 h-48 md:h-64 overflow-hidden rounded-xl">
-                  <img
-                    src={"/images/test-img-project.png"}
-                    className="w-full h-full object-cover"
-                    alt={project.title}
-                  />
-                </div>
+              <div className="w-full md:w-1/2 h-48 md:h-full overflow-hidden rounded-xl">
+                <img
+                  src={project.image}
+                  className="w-full h-full object-contain"
+                  alt={project.title}
+                />
+              </div>
               {/* )} */}
 
-              <div className="flex flex-col justify-between flex-1 gap-2">
+              <div className="flex flex-col justify-between flex-1 min-h-0 gap-2 overflow-y-auto pr-2 custom-scrollbar">
                 <div>
                   <h2 className="text-lg md:text-xl font-bold text-center md:text-left">
                     {project.title}
@@ -99,19 +101,39 @@ const Project = () => {
                   </div>
                 </div>
 
+                <div className="space-y-2">
+                  <p className="text-[10px] md:text-xs font-semibold">
+                    Role: <span className="text-[10px]">{project.role}</span>
+                  </p>
+                </div>
+
+                {!isMobile && (
+                  <div className="space-y-2">
+                    <p className="text-[10px] md:text-xs font-semibold">
+                      Responsibility:
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.responsibility.map((item, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="text-[9px] md:text-[10px]"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div className="flex gap-2 mt-2">
-                  <a
-                    href={project.github}
-                    className="black-btn"
-                  >
+                  <a href={project.github} className="black-btn">
                     Github
                   </a>
-                  <a
-                    href={project.livedemo}
-                    className="green-btn"
-                  >
-                    Live Demo
-                  </a>
+                  {project.livedemo !== "" && (
+                    <a href={project.livedemo} className="green-btn">
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

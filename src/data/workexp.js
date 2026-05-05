@@ -2,23 +2,23 @@ export const workExperiences = [
   {
     id: 1,
     company: "FPT Infomation System",
-    role: "Fullstack - Frontend: React Native, Backend: Spring boot",
-    duration: "07/2025-12/2026",
+    role: "React Native Developer Intern",
+    duration: "07/2025-11/2026",
     responsibilities: [
-      "Build UI with React",
-      "Optimize performance",
+      "Built micro-frontend architecture using Module Federation for scalable E-banking apps",
+      "Managed complex state and async flows with Redux & Redux Saga",
+      "Implemented secure authentication with Keycloak (JWT, OTP flows)",
+      "Developed and optimized React Native apps for smooth performance",
     ],
-    logo: "/images/company/abc.png",
+    logo: "/images/fptis.png",
   },
   {
-    id: 2,
-    company: "TMA Solution",
-    role: "Fullstack - Frontend: React Native, Backend: Spring boot",
-    duration: "07/2025-12/2026",
+    id: 99,
+    company: "continue...",
+    role: "",
+    duration: "",
     responsibilities: [
-      "Build UI with React",
-      "Optimize performance",
     ],
-    logo: "/images/company/abc.png",
+    isLastEl: true
   },
 ];

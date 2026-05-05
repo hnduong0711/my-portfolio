@@ -121,7 +121,7 @@ const WorkExp = () => {
 
   return (
     <section
-    id="workexp"
+      id="workexp"
       ref={sectionRef}
       className="relative h-screen w-full overflow-hidden col-center"
     >
@@ -157,7 +157,7 @@ const WorkExp = () => {
       </div>
 
       {/* content */}
-      <div className="w-full max-w-5xl px-6 flex flex-col h-full">
+      <div className="max-w-5xl flex flex-col h-full w-full">
         <h1 className="font-heading text-xl md:text-4xl text-white mb-6 md:mb-10 text-center tracking-widest">
           Work Experience
         </h1>
@@ -167,48 +167,58 @@ const WorkExp = () => {
             <div
               key={exp.id}
               ref={(el) => (cardsRef.current[index] = el)}
-              className="absolute inset-0 bg-white rounded-2xl p-6 md:p-4 flex flex-col md:flex-row gap-8 shadow-2xl overflow-hidden"
+              className="absolute inset-0 bg-white rounded-2xl px-4 py-2 md:p-4 flex flex-col md:flex-row gap-8 shadow-2xl overflow-hidden"
               style={{
                 zIndex: totalItems - index,
               }}
             >
-              {/* left */}
-              <div className="md:w-1/3 flex flex-col items-center md:items-start border-b md:border-b-0 md:border-r border-zinc-100 pb-6 md:pb-0 md:pr-10">
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-zinc-50 rounded-2xl p-3 mb-4">
-                  <img
-                    src={exp.logo}
-                    alt="company logo"
-                    className="w-full h-full object-contain"
-                  />
+              {exp.isLastEl ? (
+                <div className="md:w-1/3 col-center text-black h-full border-zinc-100 pb-6 md:pb-0 md:pr-10">
+                  <h2 className="text-xl md:text-2xl font-black text-black text-center md:text-left leading-tight uppercase">
+                    {exp.company}
+                  </h2>
                 </div>
+              ) : (
+                <>
+                  <div className="md:w-1/3 flex flex-col items-center md:items-start border-b md:border-b-0 md:border-r border-zinc-100 pb-6 md:pb-0 md:pr-10">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-zinc-50 rounded-2xl p-3 mb-4">
+                      <img
+                        src={exp.logo}
+                        alt="company logo"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
 
-                <h2 className="text-xl md:text-2xl font-black text-black text-center md:text-left leading-tight uppercase">
-                  {exp.company}
-                </h2>
+                    <h2 className="text-xl md:text-2xl font-black text-black text-center md:text-left leading-tight uppercase">
+                      {exp.company}
+                    </h2>
 
-                <p className="mt-2 text-[10px] md:text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase">
-                  {exp.duration}
-                </p>
-              </div>
+                    <p className="mt-2 text-[10px] md:text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase">
+                      {exp.duration}
+                    </p>
+                  </div>
 
-              {/* right */}
-              <div className="flex-1 overflow-y-auto custom-scrollbar">
-                <h3 className="text-lg font-bold text-zinc-800 mb-4">
-                  {exp.role}
-                </h3>
+                  {/* right */}
+                  <div className="flex-1 overflow-y-auto custom-scrollbar h-fit">
+                    <h3 className="md:text-lg text-sm font-bold text-zinc-800 mb-4">
+                      {exp.role}
+                    </h3>
 
-                <ul className="space-y-3">
-                  {exp.responsibilities.map((res, i) => (
-                    <li
-                      key={i}
-                      className="flex items-start gap-3 text-zinc-600 text-sm"
-                    >
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                      {res}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                    <ul className="space-y-3">
+                      {exp.responsibilities.map((res, i) => (
+                        <li
+                          key={i}
+                          className="flex items-start gap-3 text-zinc-600 md:text-sm text-xs"
+                        >
+                          <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                          {res}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              )}
+              {/* left */}
             </div>
           ))}
         </div>
