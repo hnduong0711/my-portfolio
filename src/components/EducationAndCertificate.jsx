@@ -62,7 +62,7 @@ const NoteCard = ({ item }) => {
       </div>
 
       {/* corner fold */}
-      <div className="absolute bottom-0 right-0 w-8 h-8 bg-gradient-to-br from-transparent via-black/5 to-black/10 rounded-br-lg" />
+      <div className="absolute bottom-0 right-0 w-8 h-8 bg-linear-to-br from-transparent via-black/5 to-black/10 rounded-br-lg" />
     </div>
   );
 };
@@ -110,11 +110,11 @@ const EducationAndCertificate = () => {
         <div
           className="
             relative
-            bg-gradient-to-br from-white/5 to-white/0
+            bg-linear-to-br from-white/5 to-white/0
             backdrop-blur-md
             border border-white/10
             rounded-3xl
-            p-8 md:p-16
+            px-8 py-10 md:p-16
             shadow-2xl
           "
         >

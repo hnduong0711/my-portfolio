@@ -206,7 +206,7 @@ const ParticleBackground = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0 pointer-events-none" />;
+  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0 pointer-events-none " />;
 };
 
 export default ParticleBackground;

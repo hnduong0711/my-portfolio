@@ -34,7 +34,10 @@ const Skills = () => {
                   </h3>
                   <ul className="space-y-2">
                     {skill.list.map((item) => (
-                      <li className="flex items-center gap-2 text-white/70 text-xs md:text-sm" key={item.id}>
+                      <li
+                        className="flex items-center gap-2 text-white/70 text-xs md:text-sm"
+                        key={item.id}
+                      >
                         <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                         {item.name}
                       </li>
